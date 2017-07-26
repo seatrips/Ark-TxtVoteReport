@@ -4,11 +4,11 @@ Current version: v1.2
 
 ## **REQUIREMENTS**
 
-Install packages: **curl**, **sed**, **[jq](https://stedolan.github.io/jq/)** and **[bc](https://www.gnu.org/software/bc/manual/html_mono/bc.html)**
+Install packages: **wget**, **curl**, **sed**, **[jq](https://stedolan.github.io/jq/)** and **[bc](https://www.gnu.org/software/bc/manual/html_mono/bc.html)**
 
-**Ubuntu:** `sudo apt-get install -y curl sed jq bc`
+**Ubuntu:** `sudo apt-get install -y wget curl sed jq bc`
 
-**CentOS:** `sudo yum install -y curl sed jq bc`
+**CentOS:** `sudo yum install -y wget curl sed jq bc`
 
 **[ark-node](https://github.com/ArkEcosystem/ark-node)** installed and sync. on port 4001 on local server.
 
