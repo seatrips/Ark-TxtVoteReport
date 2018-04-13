@@ -10,7 +10,7 @@ OutputFile='/var/www/html/VoteReport.txt'
 
 function GetVotersCount {
 	
-	VotersJsonData=$( curl -s "http://127.0.0.1:4001/api/delegates/voters?publicKey=$1" )
+	VotersJsonData=$( curl -s "http://wallet.lwf.io:18124/api/delegates/voters?publicKey=$1" )
 	echo $VotersJsonData | jq '.accounts | length'	
 }
 
@@ -40,7 +40,7 @@ function PrintJsonData {
 
 function PrintTotalVotingWeightData {
 
-	TotalArk=$( curl -s "http://127.0.0.1:4001/api/blocks/getSupply" | jq '.supply' )
+	TotalArk=$( curl -s "http://wallet.lwf.io:18124/api/blocks/getSupply" | jq '.supply' )
 	
 	TotalVote=0
 	TotalVoters=0
@@ -72,8 +72,8 @@ function PrintTotalVotingWeightData {
 # MAIN
 ###############################################################################
 
-JsonData1=$( curl -s 'http://127.0.0.1:4001/api/delegates' )
-JsonData2=$( curl -s 'http://127.0.0.1:4001/api/delegates?limit=29&offset=51' )
+JsonData1=$( curl -s 'http://wallet.lwf.io:18124/api/delegates' )
+JsonData2=$( curl -s 'http://wallet.lwf.io:18124/api/delegates?limit=29&offset=51' )
 
 WorkFile='./TxtVoteReport.txt'
 
