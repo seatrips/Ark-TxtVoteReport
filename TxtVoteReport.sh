@@ -55,16 +55,16 @@ function PrintTotalVotingWeightData {
 
 	done <<< "$( echo $1 | jq -c -r '.delegates[] | { rate, username, vote, address, publicKey, approval }' )"
 	
-	Percentage=$( bc <<< "scale=2; $TotalVote * 100 / $TotalArk" )
+	Percentage=$( bc <<< "scale=2; $TotalVote * 100 / $Totallwf" )
 	
 	TotalVote=$( expr $( echo $TotalVote ) / 100000000 )
 	TotalVote=$( echo $TotalVote | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta' )
 	
-	TotalArk=$( expr $( echo $TotalArk ) / 100000000 )
-	TotalArk=$( echo $TotalArk | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta' )
+	TotalArk=$( expr $( echo $Totallwf ) / 100000000 )
+	TotalArk=$( echo $Totallwf | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta' )
 	
-	echo -e "Top 51 Delegates Stats\n" >> $2
-	echo -e "=> Total Votes  : $Percentage% ( $TotalVote / $TotalArk )" >> $2
+	echo -e "Top 201 Delegates Stats\n" >> $2
+	echo -e "=> Total Votes  : $Percentage% ( $TotalVote / $Totallwf )" >> $2
 	echo -e "=> Total Voters : $TotalVoters\n" >> $2
 }
 
