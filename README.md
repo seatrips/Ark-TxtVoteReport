@@ -19,7 +19,7 @@ A functional local web server like **[nginx](https://www.nginx.com/)** or **[apa
 
 #### **Download the script**
 
-> wget https://raw.githubusercontent.com/Gr33nDrag0n69/Ark-TxtVoteReport/master/TxtVoteReport.sh -O ~/TxtVoteReport.sh
+> wget https://raw.githubusercontent.com/seatrips/Ark-TxtVoteReport/master/TxtVoteReport.sh -O ~/TxtVoteReport.sh
 
 #### **Make it executable**
 
